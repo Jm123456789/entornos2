@@ -1,0 +1,57 @@
+package Funciones2;
+
+import java.util.Scanner;
+
+public class Funciones21 {
+	public void cargaArray (int [] a) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Funcion1");
+		for (int i=0;i<10;i++) {
+			a [i]= sc.nextInt();
+		}
+	}
+
+	public void mayorMenor (int [] a) {
+		System.out.println("Funcion2");
+		int aux;
+		for(int i=0;i<10;i++) {
+			for (int j=0;j<a.length-1;j++) {
+				if (a[j]<a[j+1]) {
+					aux=a[j];
+					a[j]=a[j+1];
+					a[j+1]=aux;
+				}
+			}
+		}
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+	}
+	
+	public void menorMayor (int [] a) {
+		System.out.println("Funcion2");
+		int aux;
+		for(int i=0;i<10;i++) {
+			for (int j=0;j<a.length-1;j++) {
+				if (a[j]>a[j+1]) {
+					aux=a[j];
+					a[j]=a[j+1];
+					a[j+1]=aux;
+				}
+			}
+		}
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+	}
+	
+	
+
+	public static void main(String[] args) {
+		int a []= new int [10];
+		Funciones21 ej=new Funciones21();
+		ej.cargaArray(a);
+		ej.mayorMenor(a);
+		ej.menorMayor(a);
+	}
+}
